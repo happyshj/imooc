@@ -1016,13 +1016,13 @@
             })
         })
         window.onscroll = function () {
-            var top = document.body.scrollTop;
-            //console.log("top="+top);
+            var top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            console.log("top="+top);
             var show_b = document.getElementById("show_b");
-            //console.log("show_b"+show_b);
+            console.log("show_b"+show_b);
             var show = document.getElementsByClassName("go-top")[0];
             var show_top = show_b.offsetTop;
-            //console.log("show_top"+show_top);
+            console.log("show_top"+show_top);
             if(top > show_top){
                 show.style.display = "block";
             }else{
